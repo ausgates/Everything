@@ -8,6 +8,7 @@ def log(input)
     sleep 0.01
   end
 def setup
+	clear
 	print "What is your name? "
 	name = gets.chomp
 	print "How old are you? "
@@ -16,13 +17,17 @@ def setup
 	vr
 	print "Press any key to continue\n"
 	pause
+	clear
 end
 def showTime
 	time = Time.now
+	clear
 	puts time
+	pause
 end
 
 def doMath
+	clear
 	print "Number 1: "
 	number1 = gets.chomp.to_i
 	print "Number 2: "
@@ -32,20 +37,22 @@ def doMath
 	case op
 	when "+"
 		answer = number1 + number2
-		puts "Answer: #{answer}"
+		puts "Answer: #{answer}\n\nPress return to continue."
 	when "-"
 		answer = number1 - number2
-		puts "Answer: #{answer}"
+		puts "Answer: #{answer}\n\nPress return to continue."
 	when "*"
 		answer = number1 * number2
-		puts "Answer: #{answer}"
+		puts "Answer: #{answer}\n\nPress return to continue."
 	when "/"
 		answer = number1 / number2
-		puts "Answer: #{answer}"
+		puts "Answer: #{answer}\n\nPress return to continue."
 	end
-	end
+	pause
+end
 end
 def getInput
+	clear
 	log("Hello, I am your computer. What would you like to do? (For a list of commands you can say help) ".green)
 	input = gets.chomp.downcase
 	if input == "math" 
@@ -60,9 +67,16 @@ def getInput
 	elsif input == "setup"
 		setup
 	elsif input == "helloworld"
+		clear
 		puts "hello, world" * 10000
+		pause
+		clear
 	elsif input == "austin"
 		easterEgg
+	elsif input == "say"
+		print "What would you like to say? "
+		text = gets
+		say(text)
 	elsif input == "about"
 		about
 	elsif input == "quit"
@@ -72,10 +86,12 @@ def getInput
 		clear
 	else
 		log("Sorry, that is an invalid input. Please try again.\n".red)
+		pause
 	end
 end
 
 def help! 
+	clear
 	puts "\n\nYou can say\n\tMath\tA basic calculator\n\tTime\tShows the time\n\ttips\tOpen a tip calculator\n\tclear\tClears the screen\n\tquit\tQuits the program\nPress any key to continue...\n\n"
 	pause
 end
@@ -153,10 +169,20 @@ def easterEgg
 ─────────────────██▓██\n
 ──────────────────███\n
 "
+pause
+clear
 end
 
+def say(text)
+	clear
+	puts text.blue
+	pause
+	clear
+end
 def about
+	clear
 	puts "This program was written by Austin Gates.\nYou can find this program at http://github.com/ausgates/everything\nThank you."
+	pause
 end
 
 
