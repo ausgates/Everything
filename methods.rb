@@ -157,7 +157,7 @@ end
 
 def about
 	puts "This program was written by Austin Gates.\nYou can find this program at http://github.com/ausgates/everything\nThank you."
-
+end
 
 
 
