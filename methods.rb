@@ -73,6 +73,8 @@ def getInput
 		clear
 	elsif input == "austin"
 		easterEgg
+	elsif input == "josh"
+		josh
 	elsif input == "say"
 		print "What would you like to say? "
 		text = gets
@@ -92,7 +94,7 @@ end
 
 def help! 
 	clear
-	puts "\n\nYou can say\n\tMath\tA basic calculator\n\tTime\tShows the time\n\ttips\tOpen a tip calculator\n\tclear\tClears the screen\n\tquit\tQuits the program\nPress any key to continue...\n\n"
+	puts "\n\nYou can say\n\tMath\tA basic calculator\n\tTime\tShows the time\n\ttips\tOpen a tip calculator\n\tsay\tthe computer says what you type, now in blue!\n\tclear\tClears the screen\n\tquit\tQuits the program\nPress any key to continue...\n\n"
 	pause
 end
 
@@ -183,6 +185,13 @@ def about
 	clear
 	puts "This program was written by Austin Gates.\nYou can find this program at http://github.com/ausgates/everything\nThank you."
 	pause
+end
+
+def josh
+	clear
+	puts "Thank you for all the help and answering stupid questions along the way."
+	pause
+	clear
 end
 
 
