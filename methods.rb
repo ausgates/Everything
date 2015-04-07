@@ -2,11 +2,15 @@
 require 'rainbow'
 require './tips.rb'
 require 'colorize'
+
+#Makes the cool typing effect
 def log(input)
   input.length.times do |i|
     print input[i]
     sleep 0.01
   end
+
+#Completely pointless
 def setup
 	clear
 	print "What is your name? "
@@ -19,6 +23,8 @@ def setup
 	pause
 	clear
 end
+
+#Obvious
 def showTime
 	time = Time.now
 	clear
@@ -26,6 +32,7 @@ def showTime
 	pause
 end
 
+#Also obvious
 def doMath
 	clear
 	print "Number 1: "
@@ -51,6 +58,8 @@ def doMath
 	pause
 end
 end
+
+#Gets user input, defines user commands
 def getInput
 	clear
 	log("Hello, I am your computer. What would you like to do? (For a list of commands you can say help) ".green)
@@ -92,20 +101,24 @@ def getInput
 	end
 end
 
+#Help command
 def help! 
 	clear
 	puts "\n\nYou can say\n\tMath\tA basic calculator\n\tTime\tShows the time\n\ttips\tOpen a tip calculator\n\tsay\tthe computer says what you type, now in blue!\n\tclear\tClears the screen\n\tquit\tQuits the program\nPress any key to continue...\n\n"
 	pause
 end
 
+#Waits for user input, usually just enter
 def pause
   STDIN.gets
 end
 
+#Clears the screen
 def clear
   system('clear')
 end
 
+#Just for fun
 def easterEgg 
 	puts "\n────────█████─────────────█████\n
 ────████████████───────████████████\n
@@ -175,18 +188,22 @@ pause
 clear
 end
 
+#Prints user input onto screen in blue
 def say(text)
 	clear
 	puts text.blue
 	pause
 	clear
 end
+
+#Tells you about this program
 def about
 	clear
 	puts "This program was written by Austin Gates.\nYou can find this program at http://github.com/ausgates/everything\nThank you."
 	pause
 end
 
+#Says thank you to Josh (https://github.com/trommel)
 def josh
 	clear
 	puts "Thank you for all the help and answering stupid questions along the way."

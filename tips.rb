@@ -4,7 +4,7 @@
 def vr
 	puts "-" * 50
 end
-
+#Tip calculator
 def tipCalc
 	vr
 	puts "**************Austin's Tip Calculator*************"
