@@ -63,6 +63,8 @@ def getInput
 		puts "hello, world" * 10000
 	elsif input == "austin"
 		easterEgg
+	elsif input == "about"
+		about
 	elsif input == "quit"
 		clear
 		Process.exit(0)
@@ -152,6 +154,9 @@ def easterEgg
 ──────────────────███\n
 "
 end
+
+def about
+	puts "This program was written by Austin Gates.\nYou can find this program at http://github.com/ausgates/everything\nThank you."
 
 
 
